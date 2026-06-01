@@ -25,18 +25,18 @@
           </li>
         }
         <li class="header__menu-cta">
-          <a routerLink="/contact" class="btn btn--gold" (click)="closeMenu()">
+          <button type="button" class="btn btn--gold" (click)="closeMenu(); donate.open()">
             <i class="fa-solid fa-heart" aria-hidden="true"></i> Donate
-          </a>
+          </button>
         </li>
       </ul>
     </nav>
 
     <!-- Right side actions -->
     <div class="header__actions">
-      <a routerLink="/contact" class="btn btn--gold header__donate">
+      <button type="button" class="btn btn--gold header__donate" (click)="donate.open()">
         <i class="fa-solid fa-heart" aria-hidden="true"></i> Donate Now
-      </a>
+      </button>
 
       <button
         type="button"

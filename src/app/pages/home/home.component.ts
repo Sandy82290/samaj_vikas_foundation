@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { DonateService } from '../../core/services/donate.service';
 import { HeroComponent } from './sections/hero/hero.component';
 import { AboutPreviewComponent } from './sections/about-preview/about-preview.component';
 import { MissionComponent } from './sections/mission/mission.component';
@@ -50,9 +51,9 @@ import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.dir
           </p>
         </div>
         <div class="cta-band__actions">
-          <a routerLink="/contact" class="btn btn--gold btn--lg">
+          <button type="button" class="btn btn--gold btn--lg" (click)="donate.open()">
             <i class="fa-solid fa-heart" aria-hidden="true"></i> Donate Now
-          </a>
+          </button>
           <a routerLink="/contact" class="btn btn--ghost-light btn--lg">
             <i class="fa-solid fa-hands-helping" aria-hidden="true"></i> Volunteer
           </a>
@@ -126,4 +127,6 @@ import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.dir
     `,
   ],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  readonly donate = inject(DonateService);
+}

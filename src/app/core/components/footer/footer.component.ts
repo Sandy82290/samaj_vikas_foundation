@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NAV_LINKS, SITE } from '../../../shared/data/site.config';
+import { DonateService } from '../../services/donate.service';
 
 @Component({
   selector: 'app-footer',
@@ -12,6 +13,7 @@ import { NAV_LINKS, SITE } from '../../../shared/data/site.config';
 })
 export class FooterComponent {
   readonly site = SITE;
+  readonly donate = inject(DonateService);
   readonly navLinks = NAV_LINKS;
   readonly year = 2026;
 

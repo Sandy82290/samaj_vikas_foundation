@@ -2,10 +2,12 @@ import {
   ChangeDetectionStrategy,
   Component,
   HostListener,
+  inject,
   signal,
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NAV_LINKS, SITE } from '../../../shared/data/site.config';
+import { DonateService } from '../../services/donate.service';
 
 @Component({
   selector: 'app-header',
@@ -18,6 +20,7 @@ import { NAV_LINKS, SITE } from '../../../shared/data/site.config';
 export class HeaderComponent {
   readonly site = SITE;
   readonly navLinks = NAV_LINKS;
+  readonly donate = inject(DonateService);
 
   readonly scrolled = signal(false);
   readonly menuOpen = signal(false);
