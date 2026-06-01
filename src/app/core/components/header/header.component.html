@@ -1,0 +1,61 @@
+<header class="header" [class.header--scrolled]="scrolled()">
+  <div class="container header__inner">
+    <!-- Logo -->
+    <a routerLink="/" class="header__brand" aria-label="Samaj Vikas Foundation — Home" (click)="closeMenu()">
+      <img src="assets/images/header_logo.jpeg" alt="Samaj Vikas Foundation logo" class="header__logo" width="64" height="64" />
+    </a>
+
+    <!-- Desktop / mobile navigation -->
+    <nav
+      class="header__nav"
+      [class.is-open]="menuOpen()"
+      aria-label="Primary"
+    >
+      <ul class="header__menu">
+        @for (link of navLinks; track link.path) {
+          <li>
+            <a
+              [routerLink]="link.path"
+              routerLinkActive="is-active"
+              [routerLinkActiveOptions]="{ exact: !!link.exact }"
+              (click)="closeMenu()"
+            >
+              {{ link.label }}
+            </a>
+          </li>
+        }
+        <li class="header__menu-cta">
+          <a routerLink="/contact" class="btn btn--gold" (click)="closeMenu()">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i> Donate
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Right side actions -->
+    <div class="header__actions">
+      <a routerLink="/contact" class="btn btn--gold header__donate">
+        <i class="fa-solid fa-heart" aria-hidden="true"></i> Donate Now
+      </a>
+
+      <button
+        type="button"
+        class="header__toggle"
+        [class.is-open]="menuOpen()"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="primary-navigation"
+        aria-label="Toggle navigation menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile backdrop -->
+  @if (menuOpen()) {
+    <div class="header__backdrop" (click)="closeMenu()" aria-hidden="true"></div>
+  }
+</header>

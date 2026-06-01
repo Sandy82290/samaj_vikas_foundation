@@ -1,0 +1,157 @@
+<app-page-banner
+  title="About Samaj Vikas Foundation"
+  subtitle="Learn about our story, our purpose and the people working to build a better society."
+  current="About Us"
+/>
+
+<!-- Organisation Overview -->
+<section class="section">
+  <div class="container overview">
+    <div class="overview__media" appScrollReveal="left">
+      <img src="assets/images/community.svg" alt="Our team and community" class="overview__img" loading="lazy" />
+    </div>
+    <div class="overview__content" appScrollReveal="right">
+      <span class="section-head__eyebrow"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Our Story</span>
+      <h2>Building a Sustainable &amp; <span class="accent">Empowered Society</span></h2>
+      <p>
+        Founded in 2015, <strong>Samaj Vikas Foundation (समाज विकास फाउंडेशन)</strong>
+        began as a small group of volunteers determined to make a difference in the
+        lives of the underprivileged. What started as a single learning centre has
+        grown into a multi-programme organisation serving thousands of people across
+        more than ten villages.
+      </p>
+      <p>
+        We believe that real, lasting change happens when communities are empowered
+        to lead their own development. Through education, healthcare, women
+        empowerment and environmental initiatives, we work hand-in-hand with the
+        people we serve — not for them, but with them.
+      </p>
+
+      <div class="overview__stats">
+        <div>
+          <strong><span [appCountUp]="5000" suffix="+">0</span></strong>
+          <span>Lives Impacted</span>
+        </div>
+        <div>
+          <strong><span [appCountUp]="200" suffix="+">0</span></strong>
+          <span>Volunteers</span>
+        </div>
+        <div>
+          <strong><span [appCountUp]="10" suffix="+">0</span></strong>
+          <span>Villages Served</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision & Mission -->
+<section class="section section--alt">
+  <div class="container vm__grid">
+    <article class="card vm__card" appScrollReveal="left">
+      <span class="vm__icon vm__icon--vision"><i class="fa-solid fa-eye" aria-hidden="true"></i></span>
+      <h3>Our Vision</h3>
+      <p>
+        “Creating a sustainable and empowered society” — where every individual,
+        regardless of background, has the opportunity to live with dignity, access
+        education and healthcare, and contribute to a thriving community.
+      </p>
+    </article>
+    <article class="card vm__card" appScrollReveal="right">
+      <span class="vm__icon vm__icon--mission"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></span>
+      <h3>Our Mission</h3>
+      <p>
+        To support underprivileged communities through education, health and social
+        development — delivering practical, transparent and sustainable programmes
+        that create measurable, long-term impact.
+      </p>
+    </article>
+  </div>
+</section>
+
+<!-- Core Values -->
+<section class="section">
+  <div class="container">
+    <app-section-heading
+      eyebrow="What Drives Us"
+      icon="fa-compass"
+      title="Our Core"
+      accent="Values"
+      subtitle="The principles that guide every decision we make and every action we take."
+    />
+    <div class="values__grid">
+      @for (value of coreValues; track value.title; let i = $index) {
+        <article class="card values__card" appScrollReveal [revealDelay]="(i % 4) + 1">
+          <span class="values__icon"><i class="fa-solid {{ value.icon }}" aria-hidden="true"></i></span>
+          <h3>{{ value.title }}</h3>
+          <p>{{ value.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Leadership Team -->
+<section class="section section--alt">
+  <div class="container">
+    <app-section-heading
+      eyebrow="Our People"
+      icon="fa-users"
+      title="Meet the"
+      accent="Leadership Team"
+      subtitle="Dedicated individuals working tirelessly to turn our mission into reality."
+    />
+    <div class="team__grid">
+      @for (member of team; track member.name; let i = $index) {
+        <article class="card team__card" appScrollReveal [revealDelay]="(i % 4) + 1">
+          <span class="team__avatar" [style.background]="member.color">
+            {{ member.initials }}
+            @if (member.image) {
+              <img
+                class="team__photo"
+                [src]="member.image"
+                [alt]="member.name"
+                loading="lazy"
+                (error)="onPhotoError($event)"
+              />
+            }
+          </span>
+          <h3 class="team__name">{{ member.name }}</h3>
+          <span class="team__role">{{ member.role }}</span>
+          <p class="team__bio">{{ member.bio }}</p>
+          <div class="team__social">
+            @for (s of member.socials; track s.label) {
+              <a [href]="s.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="member.name + ' on ' + s.label">
+                <i class="fa-brands {{ s.icon }}" aria-hidden="true"></i>
+              </a>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Journey Timeline -->
+<section class="section">
+  <div class="container">
+    <app-section-heading
+      eyebrow="Our Journey"
+      icon="fa-timeline"
+      title="Milestones &amp;"
+      accent="Achievements"
+      subtitle="From a humble beginning to a growing movement for social change."
+    />
+    <ol class="timeline">
+      @for (entry of timeline; track entry.year; let i = $index) {
+        <li class="timeline__item" appScrollReveal="zoom" [revealDelay]="(i % 4) + 1">
+          <div class="timeline__marker">{{ entry.year }}</div>
+          <div class="card timeline__content">
+            <h3>{{ entry.title }}</h3>
+            <p>{{ entry.description }}</p>
+          </div>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

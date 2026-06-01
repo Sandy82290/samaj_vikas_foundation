@@ -1,0 +1,17 @@
+{
+  "name": "Samaj Vikas Foundation",
+  "short_name": "Samaj Vikas",
+  "description": "Empowering Communities, Building Better Futures - A social welfare NGO.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F5F5",
+  "theme_color": "#0E6A7D",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

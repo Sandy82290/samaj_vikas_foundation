@@ -1,0 +1,54 @@
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <img src="assets/images/hero-community.svg" alt="" class="hero__bg-img" />
+    <span class="hero__overlay"></span>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <span class="hero__badge">
+        <i class="fa-solid fa-hands-holding-circle" aria-hidden="true"></i>
+        Samaj Vikas Foundation • समाज विकास फाउंडेशन
+      </span>
+
+      <h1 class="hero__title">
+        Together We Can Build a <span class="hero__title-accent">Better Society</span>
+      </h1>
+
+      <p class="hero__subtitle">
+        Working for Education, Environment, Women Empowerment and Social Welfare —
+        creating lasting change in the communities that need it most.
+      </p>
+
+      <div class="hero__cta">
+        <a routerLink="/contact" class="btn btn--gold btn--lg">
+          <i class="fa-solid fa-heart" aria-hidden="true"></i> Donate Now
+        </a>
+        <a routerLink="/contact" class="btn btn--ghost-light btn--lg">
+          <i class="fa-solid fa-hands-helping" aria-hidden="true"></i> Become a Volunteer
+        </a>
+      </div>
+
+      <ul class="hero__quickstats">
+        <li>
+          <strong><span [appCountUp]="5000" suffix="+">0</span></strong>
+          <span>Lives Impacted</span>
+        </li>
+        <li>
+          <strong><span [appCountUp]="200" suffix="+">0</span></strong>
+          <span>Volunteers</span>
+        </li>
+        <li>
+          <strong><span [appCountUp]="50" suffix="+">0</span></strong>
+          <span>Projects</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hero__wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 110" preserveAspectRatio="none">
+      <path d="M0,64 C240,110 480,110 720,80 C960,50 1200,10 1440,40 L1440,110 L0,110 Z" fill="#ffffff" />
+    </svg>
+  </div>
+</section>

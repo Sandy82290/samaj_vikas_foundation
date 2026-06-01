@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" width="360" height="96" role="img" aria-label="Samaj Vikas Foundation logo">
+  <defs>
+    <path id="wTop" d="M8,48 A40,40 0 0 1 88,48" />
+    <path id="wBot" d="M16,48 A32,32 0 0 0 80,48" />
+  </defs>
+
+  <!-- Emblem (seal sits on dark footer; gold rings delineate it) -->
+  <g>
+    <circle cx="48" cy="48" r="47" fill="#123A63" />
+    <circle cx="48" cy="48" r="46.5" fill="none" stroke="#D4AF37" stroke-width="1.4" />
+    <circle cx="48" cy="48" r="33.5" fill="none" stroke="#D4AF37" stroke-width="1" />
+    <text fill="#ffffff" font-family="'Mukta',sans-serif" font-weight="600" font-size="6.4" letter-spacing="0.2">
+      <textPath href="#wTop" startOffset="50%" text-anchor="middle">समाज विकास फाउंडेशन</textPath>
+    </text>
+    <text fill="#ffffff" font-family="'Mukta',sans-serif" font-weight="600" font-size="6.4" letter-spacing="0.4">
+      <textPath href="#wBot" startOffset="50%" text-anchor="middle">मधुबनी - बिहार</textPath>
+    </text>
+    <polygon fill="#D4AF37" points="9,44 9.9,46.76 12.8,46.76 10.46,48.47 11.35,51.24 9,49.53 6.65,51.24 7.55,48.47 5.2,46.76 8.1,46.76" />
+    <polygon fill="#D4AF37" points="87,44 87.9,46.76 90.8,46.76 88.46,48.47 89.35,51.24 87,49.53 84.65,51.24 85.55,48.47 83.2,46.76 86.1,46.76" />
+    <circle cx="48" cy="48" r="33" fill="#ffffff" />
+    <path d="M21,45 L48,22 L75,45" fill="none" stroke="#0E6A7D" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" />
+    <path d="M31,57 C24,59 21,66 26,72 C30,77 38,79 47,80 L47,73 C40,72 35,69 33,64 C32,61 32,58 31,57 Z" fill="#0E6A7D" />
+    <path d="M65,57 C72,59 75,66 70,72 C66,77 58,79 49,80 L49,73 C56,72 61,69 63,64 C64,61 64,58 65,57 Z" fill="#0E6A7D" />
+    <circle cx="48" cy="44" r="14" fill="#ffffff" stroke="#0E6A7D" stroke-width="1.8" />
+    <path d="M44,45 C44,41 42,38 39,37 C40,40 40,43 44,45 Z" fill="#2e8b57" />
+    <path d="M44,45 C44,41 46,39 49,38 C48,41 47,43 44,45 Z" fill="#3aa06a" />
+    <circle cx="53" cy="40" r="4" fill="#ffffff" stroke="#0E6A7D" stroke-width="1" />
+    <line x1="49" y1="40" x2="57" y2="40" stroke="#0E6A7D" stroke-width="0.8" />
+    <line x1="53" y1="36" x2="53" y2="44" stroke="#0E6A7D" stroke-width="0.8" />
+    <ellipse cx="53" cy="40" rx="1.8" ry="4" fill="none" stroke="#0E6A7D" stroke-width="0.8" />
+    <path d="M40,50 C43,48.6 46,48.6 48,49.6 C50,48.6 53,48.6 56,50 L56,53.4 C53,52 50,52 48,53 C46,52 43,52 40,53.4 Z" fill="#123A63" />
+    <path d="M43,56 L48,54.5 L53,56" fill="none" stroke="#0E6A7D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Wordmark (light, for dark footer) -->
+  <g>
+    <text x="108" y="42" font-family="'Poppins','Segoe UI',sans-serif" font-size="23" font-weight="700" fill="#ffffff">Samaj Vikas</text>
+    <text x="108" y="64" font-family="'Poppins','Segoe UI',sans-serif" font-size="17" font-weight="600" fill="#F5F5F5">Foundation</text>
+    <text x="108" y="83" font-family="'Mukta',sans-serif" font-size="12.5" font-weight="600" fill="#D4AF37">समाज विकास फाउंडेशन • मधुबनी</text>
+  </g>
+</svg>

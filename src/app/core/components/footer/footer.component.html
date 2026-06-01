@@ -1,0 +1,86 @@
+<footer class="footer">
+  <div class="container footer__grid">
+    <!-- About -->
+    <div class="footer__col footer__about">
+      <img src="assets/images/logo-white.svg" alt="Samaj Vikas Foundation logo" class="footer__logo" width="240" height="64" />
+      <p class="footer__desc">
+        Samaj Vikas Foundation is a non-profit organisation dedicated to
+        empowering underprivileged communities through education, healthcare,
+        environment and women empowerment initiatives.
+      </p>
+      <div class="footer__social">
+        @for (s of socialLinks; track s.label) {
+          <a [href]="s.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="s.label">
+            <i class="fa-brands {{ s.icon }}" aria-hidden="true"></i>
+          </a>
+        }
+      </div>
+    </div>
+
+    <!-- Quick links -->
+    <div class="footer__col">
+      <h3 class="footer__heading">Quick Links</h3>
+      <ul class="footer__links">
+        @for (link of navLinks; track link.path) {
+          <li>
+            <a [routerLink]="link.path">
+              <i class="fa-solid fa-angle-right" aria-hidden="true"></i> {{ link.label }}
+            </a>
+          </li>
+        }
+        <li>
+          <a routerLink="/contact">
+            <i class="fa-solid fa-angle-right" aria-hidden="true"></i> Donate
+          </a>
+        </li>
+        <li>
+          <a routerLink="/contact">
+            <i class="fa-solid fa-angle-right" aria-hidden="true"></i> Volunteer
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Programs -->
+    <div class="footer__col">
+      <h3 class="footer__heading">Our Programs</h3>
+      <ul class="footer__links">
+        <li><a routerLink="/"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Child Education</a></li>
+        <li><a routerLink="/"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Skill Development</a></li>
+        <li><a routerLink="/"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Health Camps</a></li>
+        <li><a routerLink="/"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Women Empowerment</a></li>
+        <li><a routerLink="/"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Environment Awareness</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer__col">
+      <h3 class="footer__heading">Get In Touch</h3>
+      <ul class="footer__contact">
+        <li>
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>{{ site.address.line1 }}, {{ site.address.line2 }} – {{ site.address.pincode }}</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <a [href]="'tel:' + site.phoneHref">{{ site.phone }}</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <a [href]="'mailto:' + site.email">{{ site.email }}</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-clock" aria-hidden="true"></i>
+          <span>{{ site.workingHours }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bar">
+    <div class="container footer__bar-inner">
+      <p>© {{ year }} {{ site.name }} ({{ site.nameHindi }}). All rights reserved.</p>
+      <p class="footer__credit">Made with <i class="fa-solid fa-heart" aria-hidden="true"></i> for a better society.</p>
+    </div>
+  </div>
+</footer>
