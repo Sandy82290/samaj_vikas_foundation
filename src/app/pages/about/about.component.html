@@ -104,18 +104,7 @@
     <div class="team__grid">
       @for (member of team; track member.name; let i = $index) {
         <article class="card team__card" appScrollReveal [revealDelay]="(i % 4) + 1">
-          <span class="team__avatar" [style.background]="member.color">
-            {{ member.initials }}
-            @if (member.image) {
-              <img
-                class="team__photo"
-                [src]="member.image"
-                [alt]="member.name"
-                loading="lazy"
-                (error)="onPhotoError($event)"
-              />
-            }
-          </span>
+          <span class="team__avatar" [style.background]="member.color">{{ member.initials }}</span>
           <h3 class="team__name">{{ member.name }}</h3>
           <span class="team__role">{{ member.role }}</span>
           <p class="team__bio">{{ member.bio }}</p>
